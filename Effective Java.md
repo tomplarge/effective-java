@@ -448,8 +448,10 @@ public interface PhysicalConstants {
 	...
 }
 ```
+- This says nothing about what a client can do with a class and may even confuse them. 
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMzQwMzkwOCw0MzcyNDY2NzEsOTQ3NT
-IwMjcyXX0=
+eyJoaXN0b3J5IjpbLTE2MjI2NTkwODcsNDM3MjQ2NjcxLDk0Nz
+UyMDI3Ml19
 -->
