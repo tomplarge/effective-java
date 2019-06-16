@@ -461,8 +461,11 @@ public class PhysicalConstants() {
 ```
 
 ### Item 18: Favor static member classes over non-static
-
+- Nested classes should exist only to serve to enclosed
+- 4 kinds of nested classes: static member classes, non-static member classes, anonymous classes, and local classes
+- static member class
+	- simplest kind of nested class, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NDU0NjY1Niw0MzcyNDY2NzEsOTQ3NT
+eyJoaXN0b3J5IjpbMTAxNjA1NzQ0Niw0MzcyNDY2NzEsOTQ3NT
 IwMjcyXX0=
 -->
