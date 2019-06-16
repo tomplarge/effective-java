@@ -437,8 +437,10 @@ public abstract class AbstractMapEntry implements Map.Entry {
 ```
 - Note that the documentation guidelines in Item 15 should be followed for skeletal implementations
 - Abstract classes have one advantage: it is far easier to evolve an abstract class than an interface (since adding additional method for interfaces in new release breaks things)
-- 
+
+### Item 17: Use interfaces only to define types
+- Interfaces te
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTQ0NDgxOTIsNDM3MjQ2NjcxLDk0Nz
+eyJoaXN0b3J5IjpbLTE2NDkxNDc5MTMsNDM3MjQ2NjcxLDk0Nz
 UyMDI3Ml19
 -->
