@@ -379,7 +379,8 @@ public interface SingerSongwriter extends Singer, Songwriter {
 }
 ```
 - Interfaces enable safe, powerful functionality enhancements via the wrapper class idiom (Item 14)
-- You can combine interfaces and abstract classes by providing an abstract skeletal implementa
+- You can combine interfaces and abstract classes by providing an abstract skeletal implementation class to go with each nontrivial interface you export (e.g. `AbstractMap`, `Abstract Set`, etc.)
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNzc3MDIxNSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
