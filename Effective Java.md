@@ -403,8 +403,22 @@ static List intArrayAsList(final int[] a) {
 ```
 - Designing a skeletal implementation:
 	- study interface and decide which methods are the primitives in terms of which the others can be implemented. These will be abstract methods
-	- Then provide concrete implementations of all other 
+	- Then provide concrete implementations of all other methods in the interface
+- Example:
+```java
+public abstract class AbstractMapEntry implements Map.Entry {
+	// primitives
+	public abstract Object getKey();
+	public abstract Object getValue();
+	
+	// Entries in modifiable maps must override this method
+	public Object setValue(Object value) {
+		throw new UnsupportedOperationException();
+	}
+	
+	public boolean equals
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0Njk0MDk1Myw0MzcyNDY2NzEsOTQ3NT
+eyJoaXN0b3J5IjpbLTI5NzY1OTIwOCw0MzcyNDY2NzEsOTQ3NT
 IwMjcyXX0=
 -->
