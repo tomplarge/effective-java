@@ -452,9 +452,15 @@ public interface PhysicalConstants {
 - To export constants:
 	- if the constants are strongly tied to an existing class/interface, add them
 	- perhaps a `typesafe enum` (Item 21)
-	- noninstantiable uiti
+	- non-instantiable utility class (Item 3):
+```java
+public class PhysicalConstants() {
+	private PhysicalConstants() {}
+	public static final double AVOGADROS_NUMBER = ...
+	...
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNjc5OTI1Miw0MzcyNDY2NzEsOTQ3NT
-IwMjcyXX0=
+eyJoaXN0b3J5IjpbOTA3OTc0MjU3LDQzNzI0NjY3MSw5NDc1Mj
+AyNzJdfQ==
 -->
