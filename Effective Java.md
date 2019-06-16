@@ -416,9 +416,21 @@ public abstract class AbstractMapEntry implements Map.Entry {
 		throw new UnsupportedOperationException();
 	}
 	
-	public boolean equals
+	public boolean equals(Object o) {
+		if (o == this) 
+			return true;
+		if (! (o instanceof Map.Entry))
+			return false;
+		Map.Entry arg = (Map.Entry) o;
+		return eq(getKey(), arg.getKey()) && 
+			   eq(getValue(), arg.getValue());
+	}
+	private static boolean eq(Object o1, Object o2) {
+		return (o1 == null ? o2 == null : o1.equals(o2));
+	}
+	
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NzY1OTIwOCw0MzcyNDY2NzEsOTQ3NT
-IwMjcyXX0=
+eyJoaXN0b3J5IjpbLTE5NzgxMzAwNjksNDM3MjQ2NjcxLDk0Nz
+UyMDI3Ml19
 -->
