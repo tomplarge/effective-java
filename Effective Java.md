@@ -428,9 +428,14 @@ public abstract class AbstractMapEntry implements Map.Entry {
 	private static boolean eq(Object o1, Object o2) {
 		return (o1 == null ? o2 == null : o1.equals(o2));
 	}
-	
+	public int hashCode() {
+		return 
+			(getKey() == null ? 0 : getKey().hashCode()) ^ 
+			(getValue() == null ? 0 : getValue().hashCode());
+	}
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzgxMzAwNjksNDM3MjQ2NjcxLDk0Nz
-UyMDI3Ml19
+eyJoaXN0b3J5IjpbMTIyMjMwNzg1MSw0MzcyNDY2NzEsOTQ3NT
+IwMjcyXX0=
 -->
