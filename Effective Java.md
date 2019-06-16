@@ -368,8 +368,17 @@ final class Sub extends Super {
 - Interfaces allow the construction of nonhierarchical type frameworks.
 ```java
 public interface Singer {
-	Auto
+	AutoClip sing(Song s);
+}
+public interface Songwriter {
+	Song compose(boolean hit);
+}
+public interface SingerSongwriter extends Singer, Songwriter {
+	AudioClip() strum();
+	void actSensitive(); // lol wtf
+}
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzE0NTkzNzUsOTQ3NTIwMjcyXX0=
+eyJoaXN0b3J5IjpbMjYwNTY2NjA2LDk0NzUyMDI3Ml19
 -->
