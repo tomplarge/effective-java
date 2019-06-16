@@ -401,7 +401,10 @@ static List intArrayAsList(final int[] a) {
 	};
 }
 ```
+- Designing a skeletal implementation:
+	- study interface and decide which methods are the primitives in terms of which the others can be implemented. These will be abstract methods
+	- Then provide concrete implementations of all other 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY4MDUzODEyLDQzNzI0NjY3MSw5NDc1Mj
-AyNzJdfQ==
+eyJoaXN0b3J5IjpbMTc0Njk0MDk1Myw0MzcyNDY2NzEsOTQ3NT
+IwMjcyXX0=
 -->
