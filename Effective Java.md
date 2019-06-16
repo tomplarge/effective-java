@@ -460,7 +460,9 @@ public class PhysicalConstants() {
 	...
 ```
 
+### Item 18: Favor static member classes over non-static
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA3OTc0MjU3LDQzNzI0NjY3MSw5NDc1Mj
-AyNzJdfQ==
+eyJoaXN0b3J5IjpbMTA2NDU0NjY1Niw0MzcyNDY2NzEsOTQ3NT
+IwMjcyXX0=
 -->
