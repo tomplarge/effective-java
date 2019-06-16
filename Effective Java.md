@@ -449,9 +449,12 @@ public interface PhysicalConstants {
 }
 ```
 - This says nothing about what a client can do with a class and may even confuse them. 
-- 
+- To export constants:
+	- if the constants are strongly tied to an existing class/interface, add them
+	- perhaps a `typesafe enum` (Item 21)
+	- noninstantiable uiti
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjI2NTkwODcsNDM3MjQ2NjcxLDk0Nz
-UyMDI3Ml19
+eyJoaXN0b3J5IjpbLTUzNjc5OTI1Miw0MzcyNDY2NzEsOTQ3NT
+IwMjcyXX0=
 -->
