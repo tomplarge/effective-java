@@ -386,8 +386,22 @@ public interface SingerSongwriter extends Singer, Songwriter {
 static List intArrayAsList(final int[] a) {
 	if (a == null) throw new NullPointerException();
 	
+	return new AbstractList() {
+		public Object get(int i) {
+			return new Integer(a[i]);
+		}
+		public int size() {
+			return a.length
+		}
+		public Object set(int i, Object o) {
+			int oldVal = a[i];
+			a[i] = ((Integer) o).intValue();
+			return new Integer(oldVal);
+		}
+	};
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODU1MDcwNzUsNDM3MjQ2NjcxLDk0Nz
+eyJoaXN0b3J5IjpbLTEzMzcxMTUwNDgsNDM3MjQ2NjcxLDk0Nz
 UyMDI3Ml19
 -->
