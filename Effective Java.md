@@ -465,8 +465,10 @@ public class PhysicalConstants() {
 - 4 kinds of nested classes: static member classes, non-static member classes, anonymous classes, and local classes
 - static member class
 	- ordinary class declared inside another class, having access to all enclosing class members (even private), obeys same rules as other static members
+- non-static member class: 
+	- same as static, just not declared static
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjY1NzkzMTYsNDM3MjQ2NjcxLDk0Nz
-UyMDI3Ml19
+eyJoaXN0b3J5IjpbLTkxNTcyMTg5LDQzNzI0NjY3MSw5NDc1Mj
+AyNzJdfQ==
 -->
