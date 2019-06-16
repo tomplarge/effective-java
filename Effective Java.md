@@ -365,7 +365,11 @@ final class Sub extends Super {
 ### Item 16: Prefer interfaces to abstract classes
 - Existing classes can be easily retrofitted to implement a new interface, which is not generally true for an abstract class
 - Interfaces are ideal for defining mixins (a type that a class can implement in addition to its "primary type"), which is not true for abstract types
-- 
+- Interfaces allow the construction of nonhierarchical type frameworks.
+```java
+public interface Singer {
+	Auto
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ3NTIwMjcyXX0=
+eyJoaXN0b3J5IjpbLTE2NzE0NTkzNzUsOTQ3NTIwMjcyXX0=
 -->
