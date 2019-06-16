@@ -380,7 +380,7 @@ public interface SingerSongwriter extends Singer, Songwriter {
 ```
 - Interfaces enable safe, powerful functionality enhancements via the wrapper class idiom (Item 14)
 - You can combine interfaces and abstract classes by providing an abstract skeletal implementation class to go with each nontrivial interface you export (e.g. `AbstractMap`, `Abstract Set`, etc.)
-- Example of using a abstract skeletal implementation:
+- Example of using a abstract skeletal implementation, demonstrating how simple it is to provide all the utility of a `List` with such a design:
 ```java
 // List adapter for int array
 static List intArrayAsList(final int[] a) {
@@ -402,6 +402,6 @@ static List intArrayAsList(final int[] a) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzcxMTUwNDgsNDM3MjQ2NjcxLDk0Nz
-UyMDI3Ml19
+eyJoaXN0b3J5IjpbNTY4MDUzODEyLDQzNzI0NjY3MSw5NDc1Mj
+AyNzJdfQ==
 -->
