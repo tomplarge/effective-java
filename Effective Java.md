@@ -468,8 +468,9 @@ public class PhysicalConstants() {
 - non-static member class: 
 	- same as static, just not declared static
 	- each instance is implicitly associated with an enclosing instance of its containing class. 
-	- can reference 
+	- can invoke methods of enclosing class and get reference to it
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMjkyMDEzMCw0MzcyNDY2NzEsOTQ3NT
+eyJoaXN0b3J5IjpbMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NT
 IwMjcyXX0=
 -->
