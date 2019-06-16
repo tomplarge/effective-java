@@ -378,7 +378,8 @@ public interface SingerSongwriter extends Singer, Songwriter {
 	void actSensitive(); // lol wtf
 }
 ```
-
+- Interfaces enable safe, powerful functionality enhancements via the wrapper class idiom (Item 14)
+- You can combine interfaces and abstract classes by providing an abstract skeletal implementa
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYwNTY2NjA2LDk0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbMTUzNzc3MDIxNSw5NDc1MjAyNzJdfQ==
 -->
