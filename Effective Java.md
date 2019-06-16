@@ -439,8 +439,17 @@ public abstract class AbstractMapEntry implements Map.Entry {
 - Abstract classes have one advantage: it is far easier to evolve an abstract class than an interface (since adding additional method for interfaces in new release breaks things)
 
 ### Item 17: Use interfaces only to define types
-- Interfaces te
+- Interfaces tell clients what an instance of a class can do that implement the interface
+- The constant interface pattern is a poor use of interfaces:
+```java
+public interface PhysicalConstants {
+	static final double AVOGADROS_NUMBER = ...
+	static final double BOLTZMANN_CONSTANT = ...
+	...
+}
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDkxNDc5MTMsNDM3MjQ2NjcxLDk0Nz
-UyMDI3Ml19
+eyJoaXN0b3J5IjpbMTcwMzQwMzkwOCw0MzcyNDY2NzEsOTQ3NT
+IwMjcyXX0=
 -->
