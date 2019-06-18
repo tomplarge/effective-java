@@ -466,6 +466,7 @@ public class PhysicalConstants() {
 - static member class
 	- ordinary class declared inside another class, having access to all enclosing class members (even private), obeys same rules as other static members
 	- use whenever defining a member class that does not require access to an enclosing instance
+	- Example: `Map` have internal `Entry` object for each key-value pair in the map. 
 - non-static member class: 
 	- same as static, just not declared static
 	- each instance is implicitly associated with an enclosing instance of its containing class. 
@@ -483,6 +484,6 @@ public class MySet extends AbstractSet {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzY0NTM5NiwyMDI1Njk0NTA3LDQzNz
-I0NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbOTQyMTg0NjE0LDIwMjU2OTQ1MDcsNDM3Mj
+Q2NjcxLDk0NzUyMDI3Ml19
 -->
