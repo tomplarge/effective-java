@@ -469,8 +469,8 @@ public class PhysicalConstants() {
 	- same as static, just not declared static
 	- each instance is implicitly associated with an enclosing instance of its containing class. 
 	- can invoke methods of enclosing class and get reference to it
-	- 
+	- one common use is to define an Ada[te
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NT
-IwMjcyXX0=
+eyJoaXN0b3J5IjpbMTQ2NTU0MzgxOCwyMDI1Njk0NTA3LDQzNz
+I0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
