@@ -465,10 +465,11 @@ public class PhysicalConstants() {
 - 4 kinds of nested classes: static member classes, non-static member classes, anonymous classes, and local classes
 - static member class
 	- ordinary class declared inside another class, having access to all enclosing class members (even private), obeys same rules as other static members
+	- use whenever defining a member class that does not require access to an enclosing instance
 - non-static member class: 
 	- same as static, just not declared static
 	- each instance is implicitly associated with an enclosing instance of its containing class. 
-	- can invoke methods of enclosing class and get reference to it
+	- can invoke methods of enclosing class and get reference to it - impossible to create an instance of a non-static member class without an enclosing instance
 	- one common use is to define an Adapter to allow outer class to be viewed as instance of unrelated class (e.g. iterators)
 ```java
 public class MySet extends AbstractSet {
@@ -480,7 +481,8 @@ public class MySet extends AbstractSet {
 	}
 }
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1ODQ4OTY3MywyMDI1Njk0NTA3LDQzNz
+eyJoaXN0b3J5IjpbLTEzNzY0NTM5NiwyMDI1Njk0NTA3LDQzNz
 I0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
