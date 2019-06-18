@@ -471,9 +471,16 @@ public class PhysicalConstants() {
 	- can invoke methods of enclosing class and get reference to it
 	- one common use is to define an Adapter to allow outer class to be viewed as instance of unrelated class (e.g. iterators)
 ```java
-
+public class MySet extends AbstractSet {
+	public Iterator iterator() {
+		return new MyITerator();
+	}
+	private class MyIterator implements Iterator {
+		...
+	}
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDc4MjAzMDYsMjAyNTY5NDUwNyw0Mz
-cyNDY2NzEsOTQ3NTIwMjcyXX0=
+eyJoaXN0b3J5IjpbMTk1ODQ4OTY3MywyMDI1Njk0NTA3LDQzNz
+I0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
