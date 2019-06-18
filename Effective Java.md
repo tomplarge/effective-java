@@ -483,8 +483,8 @@ public class MySet extends AbstractSet {
 }
 ```
 - anonymous class
-	- rather than being declared with other instances, it is simultaneously declare dan
+	- rather than being declared with other instances, it is simultaneously declared and instantiated. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjI1Mzk4MDYsMjAyNTY5NDUwNyw0Mz
-cyNDY2NzEsOTQ3NTIwMjcyXX0=
+eyJoaXN0b3J5IjpbMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNz
+I0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
