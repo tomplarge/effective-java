@@ -561,9 +561,9 @@ public final int hashCode() {
 	return super.hashCode();
 }
 ```
-
+- To make this pattern extensible, just provide a prot
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MD
-g0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0
-NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbLTUwMDE4MTM3NCw4NTUzODY2MTgsLTIwMT
+M4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4
+MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
