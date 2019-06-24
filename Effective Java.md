@@ -567,10 +567,25 @@ public final int hashCode() {
 public abstract class Operation implements Serializable {
 	private final transient String name;
 	protected Operation(String name) { this.name = name; }
-	public static final Operation 
+	public static final Operation PLUS = new Operation("+") {
+		protected double eval(double x, double y) { return x + y; }
+	}
+	...
+	protected abstract double eval(double x, double y);
+	public String toString() { return this.name; }
+	public final boolean equals(Object that) {
+		return super.equals(that);
+	}
+	public final int hashCode() {
+		return super.hashCode();
+	}
+	private static nextOrdinal = 0;
+	private final int ordinal = nextOrdinal++;
+	private static final Operatio
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Nzg0MjE4OCw4NTUzODY2MTgsLTIwMT
+eyJoaXN0b3J5IjpbLTcxNzU2NDEzOCw4NTUzODY2MTgsLTIwMT
 M4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4
 MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
