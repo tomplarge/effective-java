@@ -561,9 +561,16 @@ public final int hashCode() {
 	return super.hashCode();
 }
 ```
-- To make this pattern extensible, just provide a prot
+- To make this pattern extensible, just provide a protected constructor. Note that the comparable variant does not work with the extensible variant.
+```java
+// Serializable, extensible typesafe enum
+public abstract class Operation implements Serializable {
+	private final transient String name;
+	protected Operation(String name) { this.name = name; }
+	public static final Operation 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMDE4MTM3NCw4NTUzODY2MTgsLTIwMT
+eyJoaXN0b3J5IjpbLTE0Nzg0MjE4OCw4NTUzODY2MTgsLTIwMT
 M4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4
 MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
