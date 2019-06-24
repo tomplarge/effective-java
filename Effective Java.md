@@ -549,9 +549,11 @@ public class Suit implements Comparable {
 	}
 	// rest the same
 	...
-}o9,
+}
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMD
-I1Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNj
+A5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3
+Ml19
 -->
