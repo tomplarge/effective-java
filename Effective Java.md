@@ -552,9 +552,18 @@ public class Suit implements Comparable {
 }
 ```
 - Item 18 presents a method for providing enum constants that provide their own implementation of methods. A declaration of `abstract double eval(double x, double y);` should also be included.
-- 
+- Also suggested to override `equals` and `hashCode` with `Object` invocations:
+```java
+public final boolean equals(Object that) {
+	return super.equals(that);
+}
+public final int hashCode() {
+	return super.hashCode();
+}
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMT
-E1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2
-NjcxLDk0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MD
+g0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0
+NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
