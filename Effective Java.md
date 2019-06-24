@@ -581,11 +581,17 @@ public abstract class Operation implements Serializable {
 	}
 	private static nextOrdinal = 0;
 	private final int ordinal = nextOrdinal++;
-	private static final Operatio
+	private static final Operation[] VALUES = 
+		{PLUS, MINUS, TIMES, DIVIDE}
+	Object readResolve() throws ObjectStreamException {
+		return VALUES[ordinal];
+	}
 }
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNzU2NDEzOCw4NTUzODY2MTgsLTIwMT
-M4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4
-MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMD
+EzODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1
+ODM3MCwyMDI1Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ
+==
 -->
