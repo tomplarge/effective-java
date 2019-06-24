@@ -1,4 +1,4 @@
-## Creating and Destroying Objects
+## 1. Creating and Destroying Objects
 ### Item 1: Consider providing static factory methods instead of constructors
 ```java
 public static Boolean valueOf(boolean b) {
@@ -89,7 +89,7 @@ public Object pop() {
 - `try-finally` is usually used to reclaim resources
 - Provide explicit termination method instead, usually used with `try-finally`
 
-## Methods Common to All Objects
+## 2. Methods Common to All Objects
 ### Item 7: Obey the general contract when overriding `equals`
 - By default, objects are only equal to themselves
 - Do not override equals if any of the following:
@@ -217,7 +217,7 @@ public int compareTo(Object o) {
 }
 ```
 
-## Classes and Interfaces
+## 3. Classes and Interfaces
 ### Item 12: Minimize the accessibility of classes and members
 - Make each class or member as inaccessible as possible
 - Access level modifiers:
@@ -475,7 +475,7 @@ public class PhysicalConstants() {
 ```java
 public class MySet extends AbstractSet {
 	public Iterator iterator() {
-		return new MyITerator();
+		return new MyIteerator();
 	}
 	private class MyIterator implements Iterator {
 		...
@@ -484,7 +484,74 @@ public class MySet extends AbstractSet {
 ```
 - anonymous class
 	- rather than being declared with other instances, it is simultaneously declared and instantiated. 
+	- one common use is a function object: 
+```java
+Arrays.sort(args, new Comparator() {
+	public int compare(Object o1, Object o2) {
+		return ((String) o1).length() - ((String) o2).length();
+	}
+});
+```
+```java
+// Typical use of a public static member class
+public class Calculator {
+	public static abstract class Operation {
+		private final String name;
+		Operation(String name) { this.name = name; }
+		public String toString() { return this.name; }
+		abstract double eval (double x, double y);
+		
+		// Doubly nested anonymous classes
+		public static final Operation PLUS = new Operation("+") {
+			double eval (double x, double y) { return x + y; }
+		};
+		public static final Operation MINUS = new Operation("-") {
+			double eval (double x, double y) { return x - y; }
+		};
+		...
+	}
+	public double calculate(double x, Operation op, double y) {
+		return op.eval(x, y);
+	}
+}
+```
+## 4. Substitutes for C Constructs
+### Item 19: Replace structures with classes
+TODO
+### Item 20: Replace unions with hierarchies
+TODO
+### Item 21: Replace `enum` constructs with classes
+- C `enum` is not bad
+- `typesafe enum` pattern: Define class representing single element of enumerated type, and don't provide any public constructors, but public static final fields instead, one for each constant in `enum`.
+```java
+public class Suit {
+	private final String name;
+	private Suit(String name) { this.name = name; }
+	public String toString() { return name; }
+	public static final Suit CLUBS = new Suit("clubs");
+	public static final Suit DIAMONDS = new Suit("diamonds");
+	public static final Suit HEARTS = new Suit("hearts");
+	public static final Suit SPADES = new Suit("spades");
+}
+```
+- Class is not extendable and can only exist in the 4 different provided types
+- To extend this to allow for sorting:
+```java
+// Ordinal-based typesafe enum
+public class Suit implements Comparable {
+	private final String name;
+	// ordinal of next suit to be created
+	private static int nextOrdinal = 0;
+	// assign an ordinal to this suit
+	private final int ordinal = nextOrdinal++;
+	public int compareTo(Object o) {
+		return ordinal - ((Suit) o).ordinal;
+	}
+	// rest the same
+	...
+}o9,
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNz
-I0NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMD
+I1Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
