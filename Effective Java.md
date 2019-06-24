@@ -551,9 +551,10 @@ public class Suit implements Comparable {
 	...
 }
 ```
-- Item 18 presents a method for providing enum constants that provide their own implementation of methods. A declaration of `abstract double eval(double x, double y);`
+- Item 18 presents a method for providing enum constants that provide their own implementation of methods. A declaration of `abstract double eval(double x, double y);` should also be included.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDMwNjAwNiwxNTA4NDc5NzI5LC0xMT
-UzNjMyMTY5LDE2MDk0NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2
-NzEsOTQ3NTIwMjcyXX0=
+eyJoaXN0b3J5IjpbLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMT
+E1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2
+NjcxLDk0NzUyMDI3Ml19
 -->
