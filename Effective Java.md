@@ -628,10 +628,11 @@ public BigInteger mod(BigInteger m) {
 } 
 ```
 - For non-public methods, check parameters with assertions
-- If validity check is expensive, or 
+- If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjE5NTkxMTksMTQ1NzgyOTA5MywtMT
-A4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4
-MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4Mz
-cwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwOD
+g0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1
+NjkyLDE1MDg0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MC
+wyMDI1Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
