@@ -612,7 +612,7 @@ abstract class ExtendedOperation extends Operation {
 ## 4. Methods
 ### Item 23: Check parameters for validity
 - Check parameter validity at the beginning, and document these restrictions
-- Use Javadoc `@throws` tag to document exception that is thrown with invalid parameter (e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, `NullPointerException`)
+- For public methods, use Javadoc `@throws` tag to document exception that is thrown with invalid parameter (e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, `NullPointerException`)
 ```java
 /*
  * [Description]
@@ -627,10 +627,10 @@ public BigInteger mod(BigInteger m) {
 	...
 } 
 ```
-
+- For non-public methods, check parameters with assertions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjE0NTM2MjksMTQ1NzgyOTA5MywtMT
-A4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4
-MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4Mz
-cwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbLTMyNDIyOTgwMSwxNDU3ODI5MDkzLC0xMD
+g4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgw
+NTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNz
+AsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIwMjcyXX0=
 -->
