@@ -579,6 +579,7 @@ public abstract class Operation implements Serializable {
 	public final int hashCode() {
 		return super.hashCode();
 	}
+	// for serialization
 	private static nextOrdinal = 0;
 	private final int ordinal = nextOrdinal++;
 	private static final Operation[] VALUES = 
@@ -590,8 +591,8 @@ public abstract class Operation implements Serializable {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMD
-EzODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1
-ODM3MCwyMDI1Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ
-==
+eyJoaXN0b3J5IjpbLTU3MjU2NjM1MCwtMTI4OTE1NTQzNSw4NT
+UzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYz
+MjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLD
+k0NzUyMDI3Ml19
 -->
