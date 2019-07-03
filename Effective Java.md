@@ -607,9 +607,13 @@ abstract class ExtendedOperation extends Operation {
 		return VALUES[ordinal];
 	}
 ```
+### Item 22: Replace function pointers with classes and interfaces
+
+## 4. Methods
+### Item 23: Check parameters for validity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMzExOTI5MCwtMTA4ODQ2Mzg0OCwtMT
+eyJoaXN0b3J5IjpbMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMT
 I4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3
 OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MD
 csNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
