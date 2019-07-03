@@ -611,10 +611,11 @@ abstract class ExtendedOperation extends Operation {
 
 ## 4. Methods
 ### Item 23: Check parameters for validity
-
+- Check parameter validity at the beginning, and document these restrictions
+- Use Javadoc `@throws` tag to document exception that is thrown with invalid parameter (e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`,
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMT
-I4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3
-OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MD
-csNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbMTUyMDkyMjY2NCwxNDU3ODI5MDkzLC0xMD
+g4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgw
+NTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNz
+AsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIwMjcyXX0=
 -->
