@@ -628,9 +628,10 @@ public BigInteger mod(BigInteger m) {
 } 
 ```
 - For non-public methods, check parameters with assertions
+- If validity check is expensive, or 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNDIyOTgwMSwxNDU3ODI5MDkzLC0xMD
-g4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgw
-NTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNz
-AsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIwMjcyXX0=
+eyJoaXN0b3J5IjpbLTEwMjE5NTkxMTksMTQ1NzgyOTA5MywtMT
+A4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4
+MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4Mz
+cwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
