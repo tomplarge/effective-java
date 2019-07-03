@@ -607,9 +607,10 @@ abstract class ExtendedOperation extends Operation {
 		return VALUES[ordinal];
 	}
 ```
+- Using typesafe enums in sets is not as fast as doing so with bit-vector of ints, but 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODg0NjM4NDgsLTEyODkxNTU0MzUsOD
-U1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2
-MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNzI0NjY3MS
-w5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbLTMwNTA2MTIzNywtMTA4ODQ2Mzg0OCwtMT
+I4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3
+OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MD
+csNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
