@@ -589,14 +589,26 @@ public abstract class Operation implements Serializable {
 	}
 }
 ```
-- Extension of this enum to add log and exp:
+- Extension of this enum to add log:
 ```java
 abstract class ExtendedOperation extends Operation {
 	ExtendedOperation(String name) { super(name); }
-	public static Operation LOG = new ExtendedO
+	public static Operation LOG = new ExtendedOperation("log") {
+		protected double eval(double x, double y) {
+			return Math.log(y) / Math.log(x);
+		}
+	};
+	// for serialization
+	private static nextOrdinal = 0;
+	private final int ordinal = nextOrdinal++;
+	private static final Operation[] VALUES = 
+		{LOG}
+	Object readResolve() throws ObjectStreamException {
+		return VALUES[ordinal];
+	}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTg0OTkxNDcsLTEyODkxNTU0MzUsOD
+eyJoaXN0b3J5IjpbLTEwODg0NjM4NDgsLTEyODkxNTU0MzUsOD
 U1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2
 MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNzI0NjY3MS
 w5NDc1MjAyNzJdfQ==
