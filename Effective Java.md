@@ -589,10 +589,15 @@ public abstract class Operation implements Serializable {
 	}
 }
 ```
-
+- Extension of this enum to add log and exp:
+```java
+abstract class ExtendedOperation extends Operation {
+	ExtendedOperation(String name) { super(name); }
+	public static Operation LOG = new ExtendedO
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MjU2NjM1MCwtMTI4OTE1NTQzNSw4NT
-UzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYz
-MjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLD
-k0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbLTE2OTg0OTkxNDcsLTEyODkxNTU0MzUsOD
+U1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2
+MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNzI0NjY3MS
+w5NDc1MjAyNzJdfQ==
 -->
