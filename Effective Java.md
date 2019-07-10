@@ -665,7 +665,8 @@ public class Stack<E> {
 	}
 ```
 
-### Item 30: Fa
+### Item 30: Favor generic methods
+
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -778,11 +779,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMjI2NTg1MSwxMjk0Nzg1MzIyLC0xNT
-UyMDAxMDA4LDEzODAzMDM4MDMsMTQ0MzgyMTA4OSwtMTA5ODQw
-MDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2NjYzLD
-M1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC0xMjg5
-MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgwNTY5MiwxNTA4NDc5Nz
-I5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNzAsMjAyNTY5NDUwNyw0
-MzcyNDY2NzFdfQ==
+eyJoaXN0b3J5IjpbLTIwNjkwNjI3MDUsMTI5NDc4NTMyMiwtMT
+U1MjAwMTAwOCwxMzgwMzAzODAzLDE0NDM4MjEwODksLTEwOTg0
+MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2My
+wzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4
+OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3OT
+cyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcs
+NDM3MjQ2NjcxXX0=
 -->
