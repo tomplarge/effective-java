@@ -539,7 +539,11 @@ TODO
 
 ## 5. Generics
 ### Item 26: Don't use raw types
-
+- Raw type corresponding to `List<E>` is `List`
+```java
+// Raw collection type - don't do this!
+private final Collection stamps = ...;
+```
 
 ## 6. Enums and Annotations
 
@@ -653,9 +657,9 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NjU5NDQxNSwtMTEyODY2NjMsMzUzNT
-kyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLTEyODkxNTU0
-MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLT
-ExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNzI0
-NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbLTE1Nzc3Mzk1OTMsMTI1NjU5NDQxNSwtMT
+EyODY2NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4
+NDgsLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLD
+E1MDg0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1
+Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
