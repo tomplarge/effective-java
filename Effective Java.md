@@ -631,7 +631,17 @@ public T[] toArray(T[] a) {
 - Can't create things like `new List<E>[]` 
 
 ### Item 29: Favor generic types
-- Stack example: To avoid making clients ca
+- Stack example: To avoid making clients cast every element popped off the stack, parameterize the class: 
+```java
+public class Stack<E> {
+	private E[] elements;
+	private int size = 0;
+	private static final int DEFAULT_INITIAL_CAPACITY = 16;
+	
+	public Stack() {
+		elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
+	
+```
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -744,7 +754,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NjQ2MzAyOCwxMjk0Nzg1MzIyLC0xNT
+eyJoaXN0b3J5IjpbMTIzNjk3MjI5NCwxMjk0Nzg1MzIyLC0xNT
 UyMDAxMDA4LDEzODAzMDM4MDMsMTQ0MzgyMTA4OSwtMTA5ODQw
 MDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2NjYzLD
 M1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC0xMjg5
