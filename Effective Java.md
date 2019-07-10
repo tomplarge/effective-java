@@ -567,7 +567,16 @@ private static void unsafeAdd(List list, Object o) {
 }
 ```
 
-- unbounded wildcard types: 
+- use unbounded wildcard types instead of raw type when element type doesn't magtter (e.g. use `Set<?>` instead of `Set` )
+```java
+static int numElementsInCommon(Set<?> s1, Set<?> s2) {
+	int result = 0;
+	for (Object o1 : s1)
+		if (s2.contains(o1))
+			result++;
+	return result;
+}
+```
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -680,10 +689,9 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMzkxNDEwOSwxMjg0NjgwNTIyLDEyNT
-Y1OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkz
-LC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMj
-AxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0
-NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIwMjcyXX
-0=
+eyJoaXN0b3J5IjpbMjA5NzYzOTksMTI4NDY4MDUyMiwxMjU2NT
+k0NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5Mywt
+MTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMT
+M4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4
+MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
