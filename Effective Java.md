@@ -624,7 +624,7 @@ public T[] toArray(T[] a) {
 - Arrays differ from generic types in two importants ways:
 	- arrays are covariant (if `Sub` is a subtype of `Super`, then `Sub[]` is a subtype of `Super[]`) whereas generics are invariant (for distinct types `A` and `B`, `List<A>` is neither a sub- nor super-type of `List<B>`)
 	- arrays are reified (arrays know and enforce their element type at runtime), generics are implemented by erasure (enforce type constraints only at compile time and discard element type at runtime)
-- Can't create things like `new List<E>[]`, `List
+- Can't create things like `new List<E>[]` 
 ### Item 29: Favor generic types
 
 ## 6. Enums and Annotations
@@ -739,7 +739,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzc2OTYzNzYsMTM4MDMwMzgwMywxND
+eyJoaXN0b3J5IjpbLTEyMDkxODQxMzAsMTM4MDMwMzgwMywxND
 QzODIxMDg5LC0xMDk4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5
 NDQxNSwtMTEyODY2NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLT
 EwODg0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEz
