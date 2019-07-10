@@ -584,6 +584,9 @@ if (o instanceof Set) {
 	Set<?> s = (Set<?>) o;
 }
 ```
+
+### Item 26: Eliminate unchecked warnings
+
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -696,10 +699,10 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTg0MDA3NjQsMTI4NDY4MDUyMiwxMj
-U2NTk0NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5
-MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLT
-IwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5
-NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml
-19
+eyJoaXN0b3J5IjpbMTQ0MzgyMTA4OSwtMTA5ODQwMDc2NCwxMj
+g0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1
+NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LD
+g1NTM4NjYxOCwtMjAxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUz
+NjMyMTY5LDE2MDk0NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2Nz
+EsOTQ3NTIwMjcyXX0=
 -->
