@@ -390,7 +390,7 @@ public interface SingerSongwriter extends Singer, Songwriter {
 	void actSensitive(); // lol wtf
 }
 ```
-- Interfaces enable safe, powerful functionality enhancements via the wrapper class idiom (Item 14)
+- Interfaces enable safe, powerful functionality enhancements via the wrapper class idiom
 - You can combine interfaces and abstract classes by providing an abstract skeletal implementation class to go with each nontrivial interface you export (e.g. `AbstractMap`, `Abstract Set`, etc.)
 - Example of using a abstract skeletal implementation, demonstrating how simple it is to provide all the utility of a `List` with such a design:
 ```java
@@ -447,7 +447,7 @@ public abstract class AbstractMapEntry implements Map.Entry {
 	}
 }
 ```
-- Note that the documentation guidelines in Item 15 should be followed for skeletal implementations
+- Note that the documentation guidelines in Item 19 should be followed for skeletal implementations
 - Abstract classes have one advantage: it is far easier to evolve an abstract class than an interface (since adding additional method for interfaces in new release breaks things)
 
 ### Item 21: Define interfaces for posterity
@@ -536,6 +536,32 @@ public class Calculator {
 ### Item 25: Limit source files to a single top-level class
 TODO
 
+
+## 5. Generics
+
+## 8. Methods
+### Item 49: Check parameters for validity
+- Check parameter validity at the beginning, and document these restrictions
+- For public methods, use Javadoc `@throws` tag to document exception that is thrown with invalid parameter (e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, `NullPointerException`)
+```java
+/*
+ * [Description]
+ * @param m the modulus, which must be positive
+ * @return this mod m
+ * @throws ArithmeticException if m <= 0
+ */
+public BigInteger mod(BigInteger m) {
+	if (m.signum() <= 0) {
+		throw new ArithmeticException("Modulus not positive");
+	}
+	...
+} 
+```
+- For non-public methods, check parameters with assertions
+- If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
+- 
+
+
 ### : Replace `enum` constructs with classes
 - C `enum` is not bad
 - `typesafe enum` pattern: Define class representing single element of enumerated type, and don't provide any public constructors, but public static final fields instead, one for each constant in `enum`.
@@ -623,34 +649,10 @@ abstract class ExtendedOperation extends Operation {
 		return VALUES[ordinal];
 	}
 ```
-
-## 5. Generics
-
-## 8. Methods
-### Item 49: Check parameters for validity
-- Check parameter validity at the beginning, and document these restrictions
-- For public methods, use Javadoc `@throws` tag to document exception that is thrown with invalid parameter (e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, `NullPointerException`)
-```java
-/*
- * [Description]
- * @param m the modulus, which must be positive
- * @return this mod m
- * @throws ArithmeticException if m <= 0
- */
-public BigInteger mod(BigInteger m) {
-	if (m.signum() <= 0) {
-		throw new ArithmeticException("Modulus not positive");
-	}
-	...
-} 
-```
-- For non-public methods, check parameters with assertions
-- If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
-- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxODEwNDc2NywzNTM1OTI4NTYsMTQ1Nz
-gyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2
-MTgsLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OS
-wxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUy
-MDI3Ml19
+eyJoaXN0b3J5IjpbOTg1MzUyNTA2LDM1MzU5Mjg1NiwxNDU3OD
+I5MDkzLC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYx
+OCwtMjAxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LD
+E2MDk0NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIw
+MjcyXX0=
 -->
