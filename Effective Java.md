@@ -653,7 +653,16 @@ public class Stack<E> {
 		if (size == 0)
 			throw new EmptyStackException();
 		
+		// A
+		@SuppressWarnings("unchecked")
+		E result = (E) elements[--size];
 		
+		// B
+		E result = elements[--size];
+		
+		elements[size] = null;
+		return result;
+	}
 ```
 ## 6. Enums and Annotations
 
@@ -767,11 +776,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ5ODU0MDQ3LDEyOTQ3ODUzMjIsLTE1NT
-IwMDEwMDgsMTM4MDMwMzgwMywxNDQzODIxMDg5LC0xMDk4NDAw
-NzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2NjMsMz
-UzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLTEyODkx
-NTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3Mj
-ksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQz
-NzI0NjY3MV19
+eyJoaXN0b3J5IjpbMTIwMDE1MTU4MSwxMjk0Nzg1MzIyLC0xNT
+UyMDAxMDA4LDEzODAzMDM4MDMsMTQ0MzgyMTA4OSwtMTA5ODQw
+MDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2NjYzLD
+M1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC0xMjg5
+MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgwNTY5MiwxNTA4NDc5Nz
+I5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNzAsMjAyNTY5NDUwNyw0
+MzcyNDY2NzFdfQ==
 -->
