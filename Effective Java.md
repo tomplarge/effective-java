@@ -590,8 +590,17 @@ if (o instanceof Set) {
 - Use `Set<Integer> s = new HashSet<>();` instead of `Set<Integer> s = new HashSet();`
 - If there is a warning you can't get rid of, but can prove it's safe, suppress it with `@SuppressWarnings("unchecked")` annotation, and always use on the smallest scope possible
 ```java
-public <T> T[] toArr
+// method from ArrayList
+public <T> T[] toArray(T[] a) {
+	if (a.length < size)
+		return (T[]) Arrays.copyOf(elements, size, a.getClass());
+	System.arraycopy(elements, 0, a, 0, size);
+	if (a.length > size)
+		a[size] = null;
+	return a;
+}
 ```
+
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -704,10 +713,10 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzc0MTUzOSwxNDQzODIxMDg5LC0xMD
-k4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2
-NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLT
-EyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0
-Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NT
-A3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbLTI4NjA1NTMxLDE0NDM4MjEwODksLTEwOT
+g0MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2
+MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMT
+I4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3
+OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MD
+csNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
