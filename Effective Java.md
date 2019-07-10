@@ -546,9 +546,12 @@ private final Collection stamps = ...;
 
 // Raw iterator type - don't do this!
 for (Iterator i = stamps.iterator(); i.hasNext(); ) 
-	Stamp stamp = (Stamp) i.next(); // Throws ClassCastException
-		stamp.cancel();
-	
+	Stamp stamp = (Stamp) i.next(); // Throws ClassCastException if i.next() is a coin
+```
+Do this instead:
+```java
+// Parameterized collection type - typesafe
+private final Collection<Stamp> stamps = ...;
 ```
 
 ## 6. Enums and Annotations
@@ -663,7 +666,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NzQ1Mzg5OSwxMjU2NTk0NDE1LC0xMT
+eyJoaXN0b3J5IjpbMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMT
 I4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0
 OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMT
 UwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2
