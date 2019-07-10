@@ -538,31 +538,12 @@ TODO
 
 
 ## 5. Generics
-
-## 8. Methods
-### Item 49: Check parameters for validity
-- Check parameter validity at the beginning, and document these restrictions
-- For public methods, use Javadoc `@throws` tag to document exception that is thrown with invalid parameter (e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, `NullPointerException`)
-```java
-/*
- * [Description]
- * @param m the modulus, which must be positive
- * @return this mod m
- * @throws ArithmeticException if m <= 0
- */
-public BigInteger mod(BigInteger m) {
-	if (m.signum() <= 0) {
-		throw new ArithmeticException("Modulus not positive");
-	}
-	...
-} 
-```
-- For non-public methods, check parameters with assertions
-- If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
-- 
+### Item 26: Don't use raw types
 
 
-### : Replace `enum` constructs with classes
+## 6. Enums and Annotations
+
+### Item 34: Use enums instead of `int` constants
 - C `enum` is not bad
 - `typesafe enum` pattern: Define class representing single element of enumerated type, and don't provide any public constructors, but public static final fields instead, one for each constant in `enum`.
 ```java
@@ -649,10 +630,32 @@ abstract class ExtendedOperation extends Operation {
 		return VALUES[ordinal];
 	}
 ```
+
+## 8. Methods
+### Item 49: Check parameters for validity
+- Check parameter validity at the beginning, and document these restrictions
+- For public methods, use Javadoc `@throws` tag to document exception that is thrown with invalid parameter (e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, `NullPointerException`)
+```java
+/*
+ * [Description]
+ * @param m the modulus, which must be positive
+ * @return this mod m
+ * @throws ArithmeticException if m <= 0
+ */
+public BigInteger mod(BigInteger m) {
+	if (m.signum() <= 0) {
+		throw new ArithmeticException("Modulus not positive");
+	}
+	...
+} 
+```
+- For non-public methods, check parameters with assertions
+- If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3OD
-I5MDkzLC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYx
-OCwtMjAxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LD
-E2MDk0NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIw
-MjcyXX0=
+eyJoaXN0b3J5IjpbMTI1NjU5NDQxNSwtMTEyODY2NjMsMzUzNT
+kyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLTEyODkxNTU0
+MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLT
+ExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNzI0
+NjY3MSw5NDc1MjAyNzJdfQ==
 -->
