@@ -553,7 +553,10 @@ Do this instead:
 // Parameterized collection type - typesafe
 private final Collection<Stamp> stamps = ...;
 ```
+- Cannot pass `List<String>` as a parameter of type `List<Object>`
+```java
 
+```
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -666,9 +669,10 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMT
-I4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0
-OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMT
-UwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2
-OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbMTAxNDMyMzQ2OCwxMjg0NjgwNTIyLDEyNT
+Y1OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkz
+LC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMj
+AxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0
+NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIwMjcyXX
+0=
 -->
