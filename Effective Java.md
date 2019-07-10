@@ -586,7 +586,9 @@ if (o instanceof Set) {
 ```
 
 ### Item 26: Eliminate unchecked warnings
-
+- Eliminate every unchecked warning you can
+- Use `Set<Integer> s = new HashSet<>();` instead of `Set<Integer> s = new HashSet();`
+- If there is a warning you can't get rid of 
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -699,10 +701,10 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MzgyMTA4OSwtMTA5ODQwMDc2NCwxMj
-g0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1
-NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LD
-g1NTM4NjYxOCwtMjAxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUz
-NjMyMTY5LDE2MDk0NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2Nz
-EsOTQ3NTIwMjcyXX0=
+eyJoaXN0b3J5IjpbMTI3NzQzNDc3NCwxNDQzODIxMDg5LC0xMD
+k4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2
+NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLT
+EyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0
+Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NT
+A3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
