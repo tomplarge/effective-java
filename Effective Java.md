@@ -536,12 +536,7 @@ public class Calculator {
 ### Item 25: Limit source files to a single top-level class
 TODO
 
-## 4. Substitutes for C Constructs
-### Item 19: Replace structures with classes
-TODO
-### Item 20: Replace unions with hierarchies
-TODO
-### Item 21: Replace `enum` constructs with classes
+### : Replace `enum` constructs with classes
 - C `enum` is not bad
 - `typesafe enum` pattern: Define class representing single element of enumerated type, and don't provide any public constructors, but public static final fields instead, one for each constant in `enum`.
 ```java
@@ -628,10 +623,11 @@ abstract class ExtendedOperation extends Operation {
 		return VALUES[ordinal];
 	}
 ```
-### Item 22: Replace function pointers with classes and interfaces
 
-## 4. Methods
-### Item 23: Check parameters for validity
+## 5. Generics
+
+## 8. Methods
+### Item 49: Check parameters for validity
 - Check parameter validity at the beginning, and document these restrictions
 - For public methods, use Javadoc `@throws` tag to document exception that is thrown with invalid parameter (e.g. `IllegalArgumentException`, `IndexOutOfBoundsException`, `NullPointerException`)
 ```java
@@ -652,9 +648,9 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjk4MzIxMDMsMzUzNTkyODU2LDE0NT
-c4MjkwOTMsLTEwODg0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2
-NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2MzIxNj
-ksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNzI0NjY3MSw5NDc1
-MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbMTMxODEwNDc2NywzNTM1OTI4NTYsMTQ1Nz
+gyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2
+MTgsLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OS
+wxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUy
+MDI3Ml19
 -->
