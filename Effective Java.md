@@ -683,7 +683,11 @@ public static Set union(Set s1, Set s2) {
 }
 ```
 - Limitation is that both input sets and return set must be the exact same type. You can make this more flexible with bounded wildcard types (Item 31)
-- 
+- To ensure mutual comparability:
+```java
+// Using a recursive type bound to express mutual comparability 
+public static <E extends Comparable<E>> E max(Collection<E> c);
+```
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -796,11 +800,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI2NjUzOTQsLTQ1MjEyNjE2NSwtMjA2OT
-A2MjcwNSwxMjk0Nzg1MzIyLC0xNTUyMDAxMDA4LDEzODAzMDM4
-MDMsMTQ0MzgyMTA4OSwtMTA5ODQwMDc2NCwxMjg0NjgwNTIyLD
-EyNTY1OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5
-MDkzLC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOC
-wtMjAxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2
-MDk0NTgzNzBdfQ==
+eyJoaXN0b3J5IjpbLTg1NDMwOTMzMCw5MjY2NTM5NCwtNDUyMT
+I2MTY1LC0yMDY5MDYyNzA1LDEyOTQ3ODUzMjIsLTE1NTIwMDEw
+MDgsMTM4MDMwMzgwMywxNDQzODIxMDg5LC0xMDk4NDAwNzY0LD
+EyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2NjMsMzUzNTky
+ODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLTEyODkxNTU0Mz
+UsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLTEx
+NTM2MzIxNjldfQ==
 -->
