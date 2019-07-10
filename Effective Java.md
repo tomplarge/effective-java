@@ -669,6 +669,13 @@ public class Stack<E> {
 - Prefer snippet A over snippet B
 ```java
 // A
+public static <E> Set<E> union(Set<E> s1, Set<E> s2) {
+	Set<E> result = new HashSet<>(s1);
+	result.addAll(s2);
+	return result;
+}
+
+// B
 public static Set union(Set s1, Set s2) {
 	Set result = new HashSet(s1);
 	result.addAll(s2);
@@ -787,7 +794,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MTI5Mjk2NCwtMjA2OTA2MjcwNSwxMj
+eyJoaXN0b3J5IjpbLTQ1MjEyNjE2NSwtMjA2OTA2MjcwNSwxMj
 k0Nzg1MzIyLC0xNTUyMDAxMDA4LDEzODAzMDM4MDMsMTQ0Mzgy
 MTA4OSwtMTA5ODQwMDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MT
 UsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4
