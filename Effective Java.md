@@ -599,9 +599,15 @@ public <T> T[] toArray(T[] a) {
 		a[size] = null;
 	return a;
 }
-/* 
- *
+/* ArrayList.java:305 warning: [unchecked] unchecked cast
+ *	return (T[]) Arrays.copyOf(elements, size, a.getClass());
+ *							   ^
+ *	required: T[] 
+ *	found: Object[]
 */
+// Adding local variable to reduce scope of @SuppressWarnings 
+public T[] toArray(T[] a) { if (a.length < size) { 
+	// This cast is correct because the array we're creating // is of the same type as the one passed in, which is T[]. @SuppressWarnings("unchecked") T[] result = (T[]) Arrays.copyOf(elements, size, a.getClass()); return result; } System.arraycopy(elements, 0, a, 0, size); if (a.length > size) a[size] = null; return a; }
 ```
 
 ## 6. Enums and Annotations
@@ -716,10 +722,10 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NDE5MzA3LDE0NDM4MjEwODksLTEwOT
-g0MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2
-MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMT
-I4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3
-OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MD
-csNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
+eyJoaXN0b3J5IjpbMTAwMzE3MzI3NywxNDQzODIxMDg5LC0xMD
+k4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2
+NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLT
+EyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0
+Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NT
+A3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
