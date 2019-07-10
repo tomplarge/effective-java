@@ -578,7 +578,12 @@ static int numElementsInCommon(Set<?> s1, Set<?> s2) {
 }
 ```
 - As an exception, you must use raw types in class literals (i.e. `List.class` is legal, `List<String>.class` is not
-- 
+-  Use raw type with `instanceof`
+```java
+if (o instanceof Set) {
+	Set<?> s = (Set<?>) o;
+}
+```
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -691,10 +696,10 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMTk0MDc2NSwxMjg0NjgwNTIyLDEyNT
-Y1OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkz
-LC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMj
-AxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0
-NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIwMjcyXX
-0=
+eyJoaXN0b3J5IjpbLTEwOTg0MDA3NjQsMTI4NDY4MDUyMiwxMj
+U2NTk0NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5
+MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLT
+IwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5
+NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml
+19
 -->
