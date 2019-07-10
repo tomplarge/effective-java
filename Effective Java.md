@@ -585,10 +585,10 @@ if (o instanceof Set) {
 }
 ```
 
-### Item 26: Eliminate unchecked warnings
+### Item 27: Eliminate unchecked warnings
 - Eliminate every unchecked warning you can
 - Use `Set<Integer> s = new HashSet<>();` instead of `Set<Integer> s = new HashSet();`
-- If there is a warning you can't get rid of, but can prove it's safe, suppress it with `@SuppressWarnings("unchecked")` annotation, and always use on the smallest scope possible
+- If there is a warning you can't get rid of, but can prove it's safe, suppress it with `@SuppressWarnings("unchecked")` annotation, and always use on the smallest scope possible, and always put a comment to explain
 ```java
 // method from ArrayList
 public <T> T[] toArray(T[] a) {
@@ -620,6 +620,7 @@ public T[] toArray(T[] a) {
 }
 ```
 
+### Item 28: Prefer lists to arrays
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -732,10 +733,10 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMTYxNTY2MywxNDQzODIxMDg5LC0xMD
-k4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2
-NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLT
-EyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0
-Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NT
-A3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbLTE1NzEwMjIyOTUsMTQ0MzgyMTA4OSwtMT
+A5ODQwMDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2
+NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC
+0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgwNTY5MiwxNTA4
+NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNzAsMjAyNTY5ND
+UwNyw0MzcyNDY2NzEsOTQ3NTIwMjcyXX0=
 -->
