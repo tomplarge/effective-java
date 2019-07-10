@@ -543,6 +543,12 @@ TODO
 ```java
 // Raw collection type - don't do this!
 private final Collection stamps = ...;
+
+// Raw iterator type - don't do this!
+for (Iterator i = stamps.iterator(); i.hasNext(); ) 
+	Stamp stamp = (Stamp) i.next(); // Throws ClassCastException
+		stamp.cancel();
+	
 ```
 
 ## 6. Enums and Annotations
@@ -657,9 +663,9 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzc3Mzk1OTMsMTI1NjU5NDQxNSwtMT
-EyODY2NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4
-NDgsLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLD
-E1MDg0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1
-Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbLTk1NzQ1Mzg5OSwxMjU2NTk0NDE1LC0xMT
+I4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0
+OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMT
+UwODQ3OTcyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2
+OTQ1MDcsNDM3MjQ2NjcxLDk0NzUyMDI3Ml19
 -->
