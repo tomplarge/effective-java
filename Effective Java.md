@@ -466,8 +466,8 @@ public interface PhysicalConstants {
 - This says nothing about what a client can do with a class and may even confuse them. 
 - To export constants:
 	- if the constants are strongly tied to an existing class/interface, add them
-	- perhaps a `typesafe enum` (Item 21)
-	- non-instantiable utility class (Item 3):
+	- perhaps a `typesafe enum`
+	- non-instantiable utility class (Item 4):
 ```java
 public class PhysicalConstants() {
 	private PhysicalConstants() {}
@@ -593,7 +593,7 @@ public class Suit implements Comparable {
 	...
 }
 ```
-- Item 18 presents a method for providing enum constants that provide their own implementation of methods. A declaration of `abstract double eval(double x, double y);` should also be included.
+- Item 24 presents a method for providing enum constants that provide their own implementation of methods. A declaration of `abstract double eval(double x, double y);` should also be included.
 - Also suggested to override `equals` and `hashCode` with `Object` invocations:
 ```java
 public final boolean equals(Object that) {
@@ -650,7 +650,7 @@ abstract class ExtendedOperation extends Operation {
 	}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg1MzUyNTA2LDM1MzU5Mjg1NiwxNDU3OD
+eyJoaXN0b3J5IjpbLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3OD
 I5MDkzLC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYx
 OCwtMjAxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LD
 E2MDk0NTgzNzAsMjAyNTY5NDUwNyw0MzcyNDY2NzEsOTQ3NTIw
