@@ -606,8 +606,18 @@ public <T> T[] toArray(T[] a) {
  *	found: Object[]
 */
 // Adding local variable to reduce scope of @SuppressWarnings 
-public T[] toArray(T[] a) { if (a.length < size) { 
-	// This cast is correct because the array we're creating // is of the same type as the one passed in, which is T[]. @SuppressWarnings("unchecked") T[] result = (T[]) Arrays.copyOf(elements, size, a.getClass()); return result; } System.arraycopy(elements, 0, a, 0, size); if (a.length > size) a[size] = null; return a; }
+public T[] toArray(T[] a) { 
+	if (a.length < size) { 
+	// This cast is correct because the array we're creating 
+	// is of the same type as the one passed in, which is T[]. 			
+		@SuppressWarnings("unchecked") T[] result = 
+			(T[]) Arrays.copyOf(elements, size, a.getClass()); 
+		return result; 
+	} 
+	System.arraycopy(elements, 0, a, 0, size); 
+	if (a.length > size) a[size] = null; 
+	return a; 
+}
 ```
 
 ## 6. Enums and Annotations
@@ -722,7 +732,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMzE3MzI3NywxNDQzODIxMDg5LC0xMD
+eyJoaXN0b3J5IjpbLTkyMTYxNTY2MywxNDQzODIxMDg5LC0xMD
 k4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2
 NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLT
 EyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0
