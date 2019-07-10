@@ -633,14 +633,20 @@ public T[] toArray(T[] a) {
 ### Item 29: Favor generic types
 - Stack example: To avoid making clients cast every element popped off the stack, parameterize the class: 
 ```java
+// Choose option A or B
 public class Stack<E> {
-	private E[] elements;
+	private E[] elements; // A
+	private Object[] elements; // B
 	private int size = 0;
 	private static final int DEFAULT_INITIAL_CAPACITY = 16;
 	
 	public Stack() {
+		// ONE OF THE FOLLOWING
+		@SuppressWarnings("unchecked")
 		elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
-	
+		// OR
+		
+	}
 ```
 ## 6. Enums and Annotations
 
@@ -754,11 +760,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNjk3MjI5NCwxMjk0Nzg1MzIyLC0xNT
-UyMDAxMDA4LDEzODAzMDM4MDMsMTQ0MzgyMTA4OSwtMTA5ODQw
-MDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2NjYzLD
-M1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC0xMjg5
-MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgwNTY5MiwxNTA4NDc5Nz
-I5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNzAsMjAyNTY5NDUwNyw0
-MzcyNDY2NzFdfQ==
+eyJoaXN0b3J5IjpbLTE5MTQzMjI2MTEsMTI5NDc4NTMyMiwtMT
+U1MjAwMTAwOCwxMzgwMzAzODAzLDE0NDM4MjEwODksLTEwOTg0
+MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2My
+wzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4
+OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3OT
+cyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcs
+NDM3MjQ2NjcxXX0=
 -->
