@@ -244,6 +244,7 @@ public static final List VALUES = Collections.unmodifiableList(Arrays.asList(PRI
 ```
 
 ### Item 16: In public classes, use accessor methods, not public fields
+TODO
 
 ### Item 17: Favor Immutability
 - Follow these rules to make class immutable:
@@ -449,9 +450,10 @@ public abstract class AbstractMapEntry implements Map.Entry {
 - Note that the documentation guidelines in Item 15 should be followed for skeletal implementations
 - Abstract classes have one advantage: it is far easier to evolve an abstract class than an interface (since adding additional method for interfaces in new release breaks things)
 
-### Item 21: Define inter
+### Item 21: Define interfaces for posterity
+TODO
 
-### Item 17: Use interfaces only to define types
+### Item 22: Use interfaces only to define types
 - Interfaces tell clients what an instance of a class can do that implement the interface
 - The constant interface pattern is a poor use of interfaces:
 ```java
@@ -473,7 +475,10 @@ public class PhysicalConstants() {
 	...
 ```
 
-### Item 18: Favor static member classes over non-static
+### Item 23: Prefer class hierarchies over tagged classes
+TODO
+
+### Item 24: Favor static member classes over non-static
 - Nested classes (classes defined within another class) should exist only to serve to enclosing class
 - 4 kinds of nested classes: static member classes, non-static member classes, anonymous classes, and local classes
 - static member class
@@ -528,6 +533,9 @@ public class Calculator {
 	}
 }
 ```
+### Item 25: Limit source files to a single top-level class
+TODO
+
 ## 4. Substitutes for C Constructs
 ### Item 19: Replace structures with classes
 TODO
@@ -644,9 +652,9 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMDEwNTU3MCwzNTM1OTI4NTYsMTQ1Nz
-gyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2
-MTgsLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OS
-wxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUy
-MDI3Ml19
+eyJoaXN0b3J5IjpbLTE0Mjk4MzIxMDMsMzUzNTkyODU2LDE0NT
+c4MjkwOTMsLTEwODg0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2
+NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2MzIxNj
+ksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQzNzI0NjY3MSw5NDc1
+MjAyNzJdfQ==
 -->
