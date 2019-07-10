@@ -641,12 +641,19 @@ public class Stack<E> {
 	private static final int DEFAULT_INITIAL_CAPACITY = 16;
 	
 	public Stack() {
-		// ONE OF THE FOLLOWING
+		// A
 		@SuppressWarnings("unchecked")
 		elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
-		// OR
 		
+		// B
+		elements = new E[DEFAULT_INITIAL_CAPACITY];
 	}
+	
+	public E pop() {
+		if (size == 0)
+			throw new EmptyStackException();
+		
+		
 ```
 ## 6. Enums and Annotations
 
@@ -760,11 +767,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTQzMjI2MTEsMTI5NDc4NTMyMiwtMT
-U1MjAwMTAwOCwxMzgwMzAzODAzLDE0NDM4MjEwODksLTEwOTg0
-MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2My
-wzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4
-OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3OT
-cyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcs
-NDM3MjQ2NjcxXX0=
+eyJoaXN0b3J5IjpbNjQ5ODU0MDQ3LDEyOTQ3ODUzMjIsLTE1NT
+IwMDEwMDgsMTM4MDMwMzgwMywxNDQzODIxMDg5LC0xMDk4NDAw
+NzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2NjMsMz
+UzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLTEyODkx
+NTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3Mj
+ksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NTA3LDQz
+NzI0NjY3MV19
 -->
