@@ -95,9 +95,11 @@ public Object pop() {
 - `try-finally` is usually used to reclaim resources
 - Provide explicit termination method instead, usually used with `try-finally`
 
-### Item 9: Prefer try-with-resources to `try-
+### Item 9: Prefer try-with-resources to `try-finally`
+TODO
+
 ## 2. Methods Common to All Objects
-### Item 7: Obey the general contract when overriding `equals`
+### Item 10: Obey the general contract when overriding `equals`
 - By default, objects are only equal to themselves
 - Do not override equals if any of the following:
 	- Each instance of the class is inherently unique
@@ -143,7 +145,7 @@ Guidelines:
 5. Check for symmetry, transitivity, and consistency
 6. Always override `hashCode` as well
 
-### Item 8: Always override `hashCode` when you override `equals`
+### Item 11: Always override `hashCode` when you override `equals`
 - Equal objects must have equal hash codes
 
 Guidelines:
@@ -160,13 +162,13 @@ Guidelines:
 4. Return `result`
 5. Check that equal instances have equal hash codes
 
-### Item 9: Always override `toString`
+### Item 12: Always override `toString`
 - Providing a good `toString` implementation will make your class much more pleasant to use (`toString` is called for `println` or `+` string concatenation)
 - When practical, should return all of the interesting information
 - It can be useful to specify the format and provide a `String` constructor (or static factory). However, once you've specified the format, there's no going back
 - Allow programmatic access to all the information contained in value returned by `toString`
 
-### Item 10: Override `clone` judiciously
+### Item 13: Override `clone` judiciously
 - `Cloneable` makes an object's `clone` method return a field-by-field copy of the object, otherwise it throws `CloneNotSupportedException`
 - If you override `clone` method in a non-final class, you should return an object obtained by invoking `super.clone`. This will chain up to the `Object.clone` method, and return an object of the right type (i.e. don't use a constructor)
 - A class that implements `Cloneable` is expected to provide a properly functioning `clone`, which requires all superclasses provide one as well
@@ -197,7 +199,7 @@ public Object clone() throws CloneNotSupportedException {
 - Don't invoke any non-final methods on the clone under construction since the state of the original and clone could be intermixed
 - A far better alternative is to provide a copy constructor: `public Foo (Foo foo) { ... }`
 
-### Item 11: Consider implementing `Comparable`
+### Item 14: Consider implementing `Comparable`
 - `compareTo()` method is the sole method of `Comparable`
 - Contract:
 1. `sign(x.compareTo(y)) == -sign(y.compareTo(x))`
@@ -225,7 +227,7 @@ public int compareTo(Object o) {
 ```
 
 ## 3. Classes and Interfaces
-### Item 12: Minimize the accessibility of classes and members
+### Item 15: Minimize the accessibility of classes and members
 - Make each class or member as inaccessible as possible
 - Access level modifiers:
 	- `private`: the member is accessible only inside the top-level class where it is declared
@@ -241,7 +243,9 @@ private static final Type[] PRIVATE_VALUES = { ... };
 public static final List VALUES = Collections.unmodifiableList(Arrays.asList(PRIVATE_VALUES));
 ```
 
-### Item 13: Favor Immutability
+### Item 16: In public classes, use accessor methods, not public fields
+
+### Item 17: Favor Immutability
 - Follow these rules to make class immutable:
 	1. Don't provide any methods that modify the object
 	2. Ensure that no methods may be overridden (make the class final, or alternatives below)
@@ -304,7 +308,7 @@ private Foo fooVal() { ... }
 - Be careful with `Serializable` - provide explicit `readObject` and `readResolve` methods
 - If a class can't be made mutable, limit mutability as much as possible (limit amount of states the object can be in). Constructors should create fully initialized objects with all of their invariants established
 
-### Item 14: Favor composition over inheritance
+### Item 18: Favor composition over inheritance
  - Inheritance is fine when subclass and superclass are under the control of the same programmers and when classes are specifically designed for extension. Inheritance across package boundaries is dangerous (superclass can change from release to release)
  - Composition solves this problem: instead of extending, add the superclass as a private field of the new class. Methods will have the same name but just forward to the "superclass"
 ```java
@@ -332,7 +336,7 @@ public class InstrumentedSet implements Set {
 ``` 
 - Use inheritance only when a "is-a" relationship exists: "Is every B really an A?" Ultimately, inheritance violates encapsulation
 
-### Item 15: Design and document for inheritance or else prohibit it
+### Item 19: Design and document for inheritance or else prohibit it
 - Class must document precisely the effects of overriding any method
 	- document self-use of overridable (non-final and public/protected) methods i.e. when it's used, in what sequence, how results affect subsequent processing
 - Class may have to provide hooks into its internal workings in the form of judiciously chosen protected methods
@@ -369,7 +373,7 @@ final class Sub extends Super {
 	- Method 2: make all constructors private/package-private and replace with static factories
 - One way to leave a class open to subclassing is to ensure no self use (no invoking overridable methods) by moving the body of each overridable method to a private "helper method" and have each overridable method invoke its private helper method.
 
-### Item 16: Prefer interfaces to abstract classes
+### Item 20: Prefer interfaces to abstract classes
 - Existing classes can be easily retrofitted to implement a new interface, which is not generally true for an abstract class
 - Interfaces are ideal for defining mixins (a type that a class can implement in addition to its "primary type"), which is not true for abstract types
 - Interfaces allow the construction of nonhierarchical type frameworks.
@@ -444,6 +448,8 @@ public abstract class AbstractMapEntry implements Map.Entry {
 ```
 - Note that the documentation guidelines in Item 15 should be followed for skeletal implementations
 - Abstract classes have one advantage: it is far easier to evolve an abstract class than an interface (since adding additional method for interfaces in new release breaks things)
+
+### Item 21: Define inter
 
 ### Item 17: Use interfaces only to define types
 - Interfaces tell clients what an instance of a class can do that implement the interface
@@ -638,7 +644,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyOTQ1NjI5NSwzNTM1OTI4NTYsMTQ1Nz
+eyJoaXN0b3J5IjpbLTgxMDEwNTU3MCwzNTM1OTI4NTYsMTQ1Nz
 gyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2
 MTgsLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OS
 wxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUy
