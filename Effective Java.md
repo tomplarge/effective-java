@@ -1,4 +1,7 @@
-# EF
+# Effective Java 3rd Edition
+[https://kea.nu/files/textbooks/new/Effective%20Java%20%282017%2C%20Addison-Wesley%29.pdf](https://kea.nu/files/textbooks/new/Effective%20Java%20%282017%2C%20Addison-Wesley%29.pdf)
+
+
 ## 1. Creating and Destroying Objects
 ### Item 1: Consider providing static factory methods instead of constructors
 ```java
@@ -741,7 +744,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMDY3ODU5MiwtMTU1MjAwMTAwOCwxMz
+eyJoaXN0b3J5IjpbMTI5NDc4NTMyMiwtMTU1MjAwMTAwOCwxMz
 gwMzAzODAzLDE0NDM4MjEwODksLTEwOTg0MDA3NjQsMTI4NDY4
 MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMT
 Q1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUz
