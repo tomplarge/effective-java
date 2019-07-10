@@ -588,7 +588,10 @@ if (o instanceof Set) {
 ### Item 26: Eliminate unchecked warnings
 - Eliminate every unchecked warning you can
 - Use `Set<Integer> s = new HashSet<>();` instead of `Set<Integer> s = new HashSet();`
-- If there is a warning you can't get rid of 
+- If there is a warning you can't get rid of, but can prove it's safe, suppress it with `@SuppressWarnings("unchecked")` annotation, and always use on the smallest scope possible
+```java
+public <T> T[] toArr
+```
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -701,7 +704,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NzQzNDc3NCwxNDQzODIxMDg5LC0xMD
+eyJoaXN0b3J5IjpbMTYyNzc0MTUzOSwxNDQzODIxMDg5LC0xMD
 k4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2
 NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLT
 EyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0
