@@ -682,7 +682,8 @@ public static Set union(Set s1, Set s2) {
 	return result;
 }
 ```
-- You can make this more fle
+- Limitation is that both input sets and return set must be the exact same type. You can make this more flexible with bounded wildcard types (Item 31)
+- 
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -795,11 +796,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNzMzNzI4NSwtNDUyMTI2MTY1LC0yMD
-Y5MDYyNzA1LDEyOTQ3ODUzMjIsLTE1NTIwMDEwMDgsMTM4MDMw
-MzgwMywxNDQzODIxMDg5LC0xMDk4NDAwNzY0LDEyODQ2ODA1Mj
-IsMTI1NjU5NDQxNSwtMTEyODY2NjMsMzUzNTkyODU2LDE0NTc4
-MjkwOTMsLTEwODg0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2Nj
-E4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2MzIxNjks
-MTYwOTQ1ODM3MF19
+eyJoaXN0b3J5IjpbOTI2NjUzOTQsLTQ1MjEyNjE2NSwtMjA2OT
+A2MjcwNSwxMjk0Nzg1MzIyLC0xNTUyMDAxMDA4LDEzODAzMDM4
+MDMsMTQ0MzgyMTA4OSwtMTA5ODQwMDc2NCwxMjg0NjgwNTIyLD
+EyNTY1OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5
+MDkzLC0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOC
+wtMjAxMzgwNTY5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2
+MDk0NTgzNzBdfQ==
 -->
