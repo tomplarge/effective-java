@@ -688,6 +688,7 @@ public static Set union(Set s1, Set s2) {
 // Using a recursive type bound to express mutual comparability 
 public static <E extends Comparable<E>> E max(Collection<E> c);
 ```
+
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -800,7 +801,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NDMwOTMzMCw5MjY2NTM5NCwtNDUyMT
+eyJoaXN0b3J5IjpbMTMxNzQzMzcyOCw5MjY2NTM5NCwtNDUyMT
 I2MTY1LC0yMDY5MDYyNzA1LDEyOTQ3ODUzMjIsLTE1NTIwMDEw
 MDgsMTM4MDMwMzgwMywxNDQzODIxMDg5LC0xMDk4NDAwNzY0LD
 EyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2NjMsMzUzNTky
