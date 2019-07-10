@@ -599,6 +599,9 @@ public <T> T[] toArray(T[] a) {
 		a[size] = null;
 	return a;
 }
+/* 
+ *
+*/
 ```
 
 ## 6. Enums and Annotations
@@ -713,7 +716,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NjA1NTMxLDE0NDM4MjEwODksLTEwOT
+eyJoaXN0b3J5IjpbMTU4NDE5MzA3LDE0NDM4MjEwODksLTEwOT
 g0MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2
 MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMT
 I4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3
