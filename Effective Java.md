@@ -1,3 +1,4 @@
+# EF
 ## 1. Creating and Destroying Objects
 ### Item 1: Consider providing static factory methods instead of constructors
 ```java
@@ -740,11 +741,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTIwMDEwMDgsMTM4MDMwMzgwMywxND
-QzODIxMDg5LC0xMDk4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5
-NDQxNSwtMTEyODY2NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLT
-EwODg0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEz
-ODA1NjkyLDE1MDg0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1OD
-M3MCwyMDI1Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
-
+eyJoaXN0b3J5IjpbMTkyMDY3ODU5MiwtMTU1MjAwMTAwOCwxMz
+gwMzAzODAzLDE0NDM4MjEwODksLTEwOTg0MDA3NjQsMTI4NDY4
+MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMT
+Q1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUz
+ODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMj
+E2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0
+NzUyMDI3Ml19
 -->
