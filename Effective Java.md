@@ -623,7 +623,7 @@ public T[] toArray(T[] a) {
 ### Item 28: Prefer lists to arrays
 - Arrays differ from generic types in two importants ways:
 	- arrays are covariant (if `Sub` is a subtype of `Super`, then `Sub[]` is a subtype of `Super[]`) whereas generics are invariant (for distinct types `A` and `B`, `List<A>` is neither a sub- nor super-type of `List<B>`)
-	- 
+	- arrays are reified (arrays know and enforce their element type at runtime), generics are implemented by erasure (enforce type constraints only
 ### Item 29: Favor generic types
 
 ## 6. Enums and Annotations
@@ -738,10 +738,10 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDcwMzU4MTUsMTQ0MzgyMTA4OSwtMT
-A5ODQwMDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2
-NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC
-0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgwNTY5MiwxNTA4
-NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNzAsMjAyNTY5ND
-UwNyw0MzcyNDY2NzEsOTQ3NTIwMjcyXX0=
+eyJoaXN0b3J5IjpbMTM4MDMwMzgwMywxNDQzODIxMDg5LC0xMD
+k4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2
+NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLT
+EyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0
+Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MCwyMDI1Njk0NT
+A3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
 -->
