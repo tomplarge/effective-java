@@ -689,6 +689,14 @@ public static Set union(Set s1, Set s2) {
 public static <E extends Comparable<E>> E max(Collection<E> c);
 ```
 
+### Item 31: Favor generic methods
+TODO
+
+### Item 32: Combine generics and varargs judiciously
+TODO
+
+### Item 33: Consider typesafe heterogeneous containers
+
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -801,7 +809,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNzQzMzcyOCw5MjY2NTM5NCwtNDUyMT
+eyJoaXN0b3J5IjpbLTI4Nzg0NDgxMyw5MjY2NTM5NCwtNDUyMT
 I2MTY1LC0yMDY5MDYyNzA1LDEyOTQ3ODUzMjIsLTE1NTIwMDEw
 MDgsMTM4MDMwMzgwMywxNDQzODIxMDg5LC0xMDk4NDAwNzY0LD
 EyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2NjMsMzUzNTky
