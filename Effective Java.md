@@ -666,7 +666,15 @@ public class Stack<E> {
 ```
 
 ### Item 30: Favor generic methods
-
+- Prefer snippet A over snippet B
+```java
+// A
+public static Set union(Set s1, Set s2) {
+	Set result = new HashSet(s1);
+	result.addAll(s2);
+	return result;
+}
+```
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -779,11 +787,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjkwNjI3MDUsMTI5NDc4NTMyMiwtMT
-U1MjAwMTAwOCwxMzgwMzAzODAzLDE0NDM4MjEwODksLTEwOTg0
-MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4NjY2My
-wzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4
-OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUwODQ3OT
-cyOSwtMTE1MzYzMjE2OSwxNjA5NDU4MzcwLDIwMjU2OTQ1MDcs
-NDM3MjQ2NjcxXX0=
+eyJoaXN0b3J5IjpbLTM1MTI5Mjk2NCwtMjA2OTA2MjcwNSwxMj
+k0Nzg1MzIyLC0xNTUyMDAxMDA4LDEzODAzMDM4MDMsMTQ0Mzgy
+MTA4OSwtMTA5ODQwMDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MT
+UsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4
+NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAxMzgwNT
+Y5MiwxNTA4NDc5NzI5LC0xMTUzNjMyMTY5LDE2MDk0NTgzNzAs
+MjAyNTY5NDUwN119
 -->
