@@ -654,16 +654,18 @@ public class Stack<E> {
 			throw new EmptyStackException();
 		
 		// A
-		@SuppressWarnings("unchecked")
-		E result = (E) elements[--size];
-		
-		// B
 		E result = elements[--size];
 		
+		// B
+		@SuppressWarnings("unchecked")
+		E result = (E) elements[--size];
+	
 		elements[size] = null;
 		return result;
 	}
 ```
+
+### Item 30: Fa
 ## 6. Enums and Annotations
 
 ### Item 34: Use enums instead of `int` constants
@@ -776,7 +778,7 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMDE1MTU4MSwxMjk0Nzg1MzIyLC0xNT
+eyJoaXN0b3J5IjpbMTcxMjI2NTg1MSwxMjk0Nzg1MzIyLC0xNT
 UyMDAxMDA4LDEzODAzMDM4MDMsMTQ0MzgyMTA4OSwtMTA5ODQw
 MDc2NCwxMjg0NjgwNTIyLDEyNTY1OTQ0MTUsLTExMjg2NjYzLD
 M1MzU5Mjg1NiwxNDU3ODI5MDkzLC0xMDg4NDYzODQ4LC0xMjg5
