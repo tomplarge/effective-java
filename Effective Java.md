@@ -18,7 +18,10 @@ Disadvantages:
 	- valueOf: returns instance that has same value as parameters
 	- getInstance: returns an instance described by parameters but cannot be said to have same value
 
-### Item 2: Enforce the singleton property with a private constructor
+### Item 2: Consider a builder when faced with many constructor parameters
+TODO
+
+### Item 3: Enforce the singleton property with a private constructor
 Method 1:
 ```java
 public class Elvis {
@@ -49,9 +52,12 @@ private Object readResolve() throw ObjectStreamException {
 	return INSTANCE;
 }
 ```
-### Item 3: Enforce noninstantiability with a private constructor
+### Item 4: Enforce noninstantiability with a private constructor
 For a class that just groups static methods (utility classes), use private constructor (that does nothing). Compiler gives default public constructor when none are given, even for abstract classes. However, this class cannot be subclassed.
-### Item 4: Avoid creating duplicate objects
+### Item 5: Prefer dependency injection to hardwiring resources
+TODO
+
+### Item 6: Avoid creating duplicate objects
 - DON'T DO THIS:  ` String s = new String("silly");`
 - Using static factory methods can eliminate duplicate object creation e.g. `Boolean.valueOf(String)` vs `Boolean(String)`
 - For classes that will never change, only instantiate once:
@@ -67,7 +73,7 @@ class Person {
 	}
 }
 ```
-### Item 5: Eliminate obsolete object references
+### Item 7: Eliminate obsolete object references
 - If an object reference is unintentionally retained, this object and objects references held by this object, etc.
 - Stack implementation that manages its own memory:
 ```java
@@ -84,11 +90,12 @@ public Object pop() {
 	- solution 1: if cache entry is relevant only as long as there are references to it, use `WeakHashMap`
 	- solution 2: clean cache with timer activated background thread or side effect of insert
 
-### Item 6: Avoid finalizers
+### Item 8: Avoid finalizers
 - DO NOT use finalizers for anything time-sensitive or anything critical state related
 - `try-finally` is usually used to reclaim resources
 - Provide explicit termination method instead, usually used with `try-finally`
 
+### Item 9: Prefer try-with-resources to `try-
 ## 2. Methods Common to All Objects
 ### Item 7: Obey the general contract when overriding `equals`
 - By default, objects are only equal to themselves
@@ -631,8 +638,9 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUzNTkyODU2LDE0NTc4MjkwOTMsLTEwOD
-g0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEzODA1
-NjkyLDE1MDg0Nzk3MjksLTExNTM2MzIxNjksMTYwOTQ1ODM3MC
-wyMDI1Njk0NTA3LDQzNzI0NjY3MSw5NDc1MjAyNzJdfQ==
+eyJoaXN0b3J5IjpbMTAyOTQ1NjI5NSwzNTM1OTI4NTYsMTQ1Nz
+gyOTA5MywtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2
+MTgsLTIwMTM4MDU2OTIsMTUwODQ3OTcyOSwtMTE1MzYzMjE2OS
+wxNjA5NDU4MzcwLDIwMjU2OTQ1MDcsNDM3MjQ2NjcxLDk0NzUy
+MDI3Ml19
 -->
