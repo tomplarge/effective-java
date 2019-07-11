@@ -696,6 +696,7 @@ TODO
 TODO
 
 ### Item 33: Consider typesafe heterogeneous containers
+TODO
 
 ## 6. Enums and Annotations
 
@@ -809,11 +810,11 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4Nzg0NDgxMyw5MjY2NTM5NCwtNDUyMT
-I2MTY1LC0yMDY5MDYyNzA1LDEyOTQ3ODUzMjIsLTE1NTIwMDEw
-MDgsMTM4MDMwMzgwMywxNDQzODIxMDg5LC0xMDk4NDAwNzY0LD
-EyODQ2ODA1MjIsMTI1NjU5NDQxNSwtMTEyODY2NjMsMzUzNTky
-ODU2LDE0NTc4MjkwOTMsLTEwODg0NjM4NDgsLTEyODkxNTU0Mz
-UsODU1Mzg2NjE4LC0yMDEzODA1NjkyLDE1MDg0Nzk3MjksLTEx
-NTM2MzIxNjldfQ==
+eyJoaXN0b3J5IjpbMTk1OTkxMTU2MywtMjg3ODQ0ODEzLDkyNj
+Y1Mzk0LC00NTIxMjYxNjUsLTIwNjkwNjI3MDUsMTI5NDc4NTMy
+MiwtMTU1MjAwMTAwOCwxMzgwMzAzODAzLDE0NDM4MjEwODksLT
+EwOTg0MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4
+NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OC
+wtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUw
+ODQ3OTcyOV19
 -->
