@@ -810,9 +810,9 @@ public BigInteger mod(BigInteger m) {
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
 
 ### Item 50: Make defensive copies when needed
-- 
+- Th
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5OTg3ODQ3NSwxOTU5OTExNTYzLC0yOD
+eyJoaXN0b3J5IjpbLTEwNjIzNzE5MywxOTU5OTExNTYzLC0yOD
 c4NDQ4MTMsOTI2NjUzOTQsLTQ1MjEyNjE2NSwtMjA2OTA2Mjcw
 NSwxMjk0Nzg1MzIyLC0xNTUyMDAxMDA4LDEzODAzMDM4MDMsMT
 Q0MzgyMTA4OSwtMTA5ODQwMDc2NCwxMjg0NjgwNTIyLDEyNTY1
