@@ -852,13 +852,14 @@ public Date start() {
 	return new Date(start.getTime());
 }
 ```
-- Good strategy is to use immutable components for objects to not have to worry
+- Good strategy is to use immutable components for objects to not have to worry about this
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNDU4ODEsMTk1OTkxMTU2MywtMjg3OD
-Q0ODEzLDkyNjY1Mzk0LC00NTIxMjYxNjUsLTIwNjkwNjI3MDUs
-MTI5NDc4NTMyMiwtMTU1MjAwMTAwOCwxMzgwMzAzODAzLDE0ND
-M4MjEwODksLTEwOTg0MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0
-NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMT
-A4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4
-MDU2OTJdfQ==
+eyJoaXN0b3J5IjpbLTEzOTY3MTAxMjEsMTk1OTkxMTU2MywtMj
+g3ODQ0ODEzLDkyNjY1Mzk0LC00NTIxMjYxNjUsLTIwNjkwNjI3
+MDUsMTI5NDc4NTMyMiwtMTU1MjAwMTAwOCwxMzgwMzAzODAzLD
+E0NDM4MjEwODksLTEwOTg0MDA3NjQsMTI4NDY4MDUyMiwxMjU2
+NTk0NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5My
+wtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIw
+MTM4MDU2OTJdfQ==
 -->
