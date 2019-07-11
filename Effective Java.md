@@ -808,13 +808,15 @@ public BigInteger mod(BigInteger m) {
 ```
 - For non-public methods, check parameters with assertions
 - If validity check is expensive, or will be implicitly done in calculations, you can exclude or delay it
+
+### Item 50: Make defensive copies when needed
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1OTkxMTU2MywtMjg3ODQ0ODEzLDkyNj
-Y1Mzk0LC00NTIxMjYxNjUsLTIwNjkwNjI3MDUsMTI5NDc4NTMy
-MiwtMTU1MjAwMTAwOCwxMzgwMzAzODAzLDE0NDM4MjEwODksLT
-EwOTg0MDA3NjQsMTI4NDY4MDUyMiwxMjU2NTk0NDE1LC0xMTI4
-NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5MywtMTA4ODQ2Mzg0OC
-wtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIwMTM4MDU2OTIsMTUw
-ODQ3OTcyOV19
+eyJoaXN0b3J5IjpbMTU5OTg3ODQ3NSwxOTU5OTExNTYzLC0yOD
+c4NDQ4MTMsOTI2NjUzOTQsLTQ1MjEyNjE2NSwtMjA2OTA2Mjcw
+NSwxMjk0Nzg1MzIyLC0xNTUyMDAxMDA4LDEzODAzMDM4MDMsMT
+Q0MzgyMTA4OSwtMTA5ODQwMDc2NCwxMjg0NjgwNTIyLDEyNTY1
+OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkzLC
+0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAx
+MzgwNTY5Ml19
 -->
