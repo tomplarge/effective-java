@@ -816,6 +816,8 @@ public final class Period {
 	private final Date start;
 	private final Date end;
 	public Period(Date start, Date end) {
+		if (start.compareTo(this.end) > 0)
+			throw ...
 		this.start = start;
 		this.end = end;
 	}
@@ -835,14 +837,20 @@ end.SetYear(78); // modifies internals of p
 ```java
 public Period(Date start, Date end) {
 	this.start = new Date(start.getTime());
-	this.end - 
+	this.end = new Date(end.getTime());
+	
+	if (this.start.compareTo(this.end) > 0)
+		throw ...
+}
 ```
+- Note that the validity checks are done after setting parameters to protect against windows of vulnerability being exploited from another thread (time of check, time of use)
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3Njc4OTMxLDE5NTk5MTE1NjMsLTI4Nz
-g0NDgxMyw5MjY2NTM5NCwtNDUyMTI2MTY1LC0yMDY5MDYyNzA1
-LDEyOTQ3ODUzMjIsLTE1NTIwMDEwMDgsMTM4MDMwMzgwMywxND
-QzODIxMDg5LC0xMDk4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5
-NDQxNSwtMTEyODY2NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLT
-EwODg0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEz
-ODA1NjkyXX0=
+eyJoaXN0b3J5IjpbLTg3MTQ0MTMyOSwxOTU5OTExNTYzLC0yOD
+c4NDQ4MTMsOTI2NjUzOTQsLTQ1MjEyNjE2NSwtMjA2OTA2Mjcw
+NSwxMjk0Nzg1MzIyLC0xNTUyMDAxMDA4LDEzODAzMDM4MDMsMT
+Q0MzgyMTA4OSwtMTA5ODQwMDc2NCwxMjg0NjgwNTIyLDEyNTY1
+OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkzLC
+0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAx
+MzgwNTY5Ml19
 -->
