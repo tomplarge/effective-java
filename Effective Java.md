@@ -825,14 +825,24 @@ public final class Period {
 ```
 - Since `Date` is mutable, then the following makes `Period` mutable:
 ```java
-Date start
+Date start = new Date();
+Date end = new Date();
+Period p = new Period(start, end);
+end.SetYear(78); // modifies internals of p
+```
+- One fix is to use `Instant` instead of `Date`
+- Essential to make defensive copy of each mutable parameter to the constructor
+```java
+public Period(Date start, Date end) {
+	this.start = new Date(start.getTime());
+	this.end - 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzUzNjgyMTUsMTk1OTkxMTU2MywtMj
-g3ODQ0ODEzLDkyNjY1Mzk0LC00NTIxMjYxNjUsLTIwNjkwNjI3
-MDUsMTI5NDc4NTMyMiwtMTU1MjAwMTAwOCwxMzgwMzAzODAzLD
-E0NDM4MjEwODksLTEwOTg0MDA3NjQsMTI4NDY4MDUyMiwxMjU2
-NTk0NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5My
-wtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIw
-MTM4MDU2OTJdfQ==
+eyJoaXN0b3J5IjpbMTI3Njc4OTMxLDE5NTk5MTE1NjMsLTI4Nz
+g0NDgxMyw5MjY2NTM5NCwtNDUyMTI2MTY1LC0yMDY5MDYyNzA1
+LDEyOTQ3ODUzMjIsLTE1NTIwMDEwMDgsMTM4MDMwMzgwMywxND
+QzODIxMDg5LC0xMDk4NDAwNzY0LDEyODQ2ODA1MjIsMTI1NjU5
+NDQxNSwtMTEyODY2NjMsMzUzNTkyODU2LDE0NTc4MjkwOTMsLT
+EwODg0NjM4NDgsLTEyODkxNTU0MzUsODU1Mzg2NjE4LC0yMDEz
+ODA1NjkyXX0=
 -->
