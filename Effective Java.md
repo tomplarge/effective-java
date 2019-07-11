@@ -831,8 +831,7 @@ Date start = new Date();
 Date end = new Date();
 Period p = new Period(start, end);
 end.SetYear(78); // modifies internals of p
-
-p.end().setYear(78
+p.start().setYear(1); // modifies internals of p too
 ```
 - One fix is to use `Instant` instead of `Date`
 - Essential to make defensive copy of each mutable parameter to the constructor
@@ -847,13 +846,19 @@ public Period(Date start, Date end) {
 ```
 - Note that the validity checks are done after setting parameters to protect against windows of vulnerability being exploited from another thread (time of check, time of use)
 - Don't use clone to make defensive copy whose type is subclassable by untrusted parties
-- Must also return defensive copies
+- Must also return defensive copies of internal fields:
+```java
+public Date start() {
+	return new Date(start.getTime());
+}
+```
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTM1MzA1NjAsMTk1OTkxMTU2MywtMj
-g3ODQ0ODEzLDkyNjY1Mzk0LC00NTIxMjYxNjUsLTIwNjkwNjI3
-MDUsMTI5NDc4NTMyMiwtMTU1MjAwMTAwOCwxMzgwMzAzODAzLD
-E0NDM4MjEwODksLTEwOTg0MDA3NjQsMTI4NDY4MDUyMiwxMjU2
-NTk0NDE1LC0xMTI4NjY2MywzNTM1OTI4NTYsMTQ1NzgyOTA5My
-wtMTA4ODQ2Mzg0OCwtMTI4OTE1NTQzNSw4NTUzODY2MTgsLTIw
-MTM4MDU2OTJdfQ==
+eyJoaXN0b3J5IjpbMTE0ODA4ODkxMCwxOTU5OTExNTYzLC0yOD
+c4NDQ4MTMsOTI2NjUzOTQsLTQ1MjEyNjE2NSwtMjA2OTA2Mjcw
+NSwxMjk0Nzg1MzIyLC0xNTUyMDAxMDA4LDEzODAzMDM4MDMsMT
+Q0MzgyMTA4OSwtMTA5ODQwMDc2NCwxMjg0NjgwNTIyLDEyNTY1
+OTQ0MTUsLTExMjg2NjYzLDM1MzU5Mjg1NiwxNDU3ODI5MDkzLC
+0xMDg4NDYzODQ4LC0xMjg5MTU1NDM1LDg1NTM4NjYxOCwtMjAx
+MzgwNTY5Ml19
 -->
